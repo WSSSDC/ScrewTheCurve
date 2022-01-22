@@ -92,5 +92,6 @@ struct SignUp: View {
 struct SignUp_Previews: PreviewProvider {
     static var previews: some View {
         SignUp()
+.previewInterfaceOrientation(.portrait)
     }
 }
