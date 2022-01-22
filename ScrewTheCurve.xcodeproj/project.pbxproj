@@ -21,6 +21,7 @@
 		5CF4CBF5279B8CBB00BBE5F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF4CBF4279B8CBB00BBE5F8 /* Assets.xcassets */; };
 		5CF4CBF8279B8CBB00BBE5F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF4CBF7279B8CBB00BBE5F8 /* Preview Assets.xcassets */; };
 		5CFA8CB7279C513200FF144E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CFA8CB6279C513200FF144E /* GoogleService-Info.plist */; };
+		5CFA8CB9279C79B700FF144E /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFA8CB8279C79B700FF144E /* SuccessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		5CF4CBF4279B8CBB00BBE5F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CF4CBF7279B8CBB00BBE5F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5CFA8CB6279C513200FF144E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5CFA8CB8279C79B700FF144E /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				5C7177D4279B9E7500C6A49A /* ClassSelection.swift */,
 				5C7177D6279B9E8B00C6A49A /* ConnectionMade.swift */,
 				5C7177D8279B9EA100C6A49A /* Messaging.swift */,
+				5CFA8CB8279C79B700FF144E /* SuccessView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				5C7177D3279B9E3C00C6A49A /* SignIn.swift in Sources */,
 				5C7177D5279B9E7500C6A49A /* ClassSelection.swift in Sources */,
 				5CF4CBF3279B8CBB00BBE5F8 /* ContentView.swift in Sources */,
+				5CFA8CB9279C79B700FF144E /* SuccessView.swift in Sources */,
 				5C7177CF279B9E2100C6A49A /* IntroScreen.swift in Sources */,
 				5C7177D7279B9E8B00C6A49A /* ConnectionMade.swift in Sources */,
 				5C7177D1279B9E3500C6A49A /* SignUp.swift in Sources */,

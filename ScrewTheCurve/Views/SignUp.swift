@@ -40,52 +40,59 @@ struct SignUp: View {
                     print("Error writing document: \(err)")
                 } else {
                     print("Document successfully written!")
+                    signUpSuccess = true
                 }
             }
-        
-        
     }
-    @State private var fullName: String = ""
-    @State private var username: String = ""
-    @State private var email: String = ""
-    @State private var password: String = ""
+    @State var fullName: String = ""
+    @State var username: String = ""
+    @State var email: String = ""
+    @State var password: String = ""
+    @State var signUpSuccess: Bool = false
     var body: some View {
-        VStack{
-            Text("Sign Up")
-                .font(.largeTitle)
-                .fontWeight(.semibold)
-                .padding(.bottom, 20)
-            TextField("Full Name", text: $fullName)
-                .padding()
-                .background(lightGreyColor)
-                .cornerRadius(5.0)
-                .padding(.bottom, 20)
-            TextField("Username", text: $username)
-                .padding()
-                .background(lightGreyColor)
-                .cornerRadius(5.0)
-                .padding(.bottom, 20)
-            TextField("Email", text: $email)
-                .padding()
-                .background(lightGreyColor)
-                .cornerRadius(5.0)
-                .padding(.bottom, 20)
-            SecureField("Password", text: $password)
-                .padding()
-                .background(lightGreyColor)
-                .cornerRadius(5.0)
-                .padding(.bottom, 20)
+        switch signUpSuccess{
+            case false:
+                VStack{
+                    Text("Sign Up")
+                        .font(.largeTitle)
+                        .fontWeight(.semibold)
+                        .padding(.bottom, 20)
+                    TextField("Full Name", text: $fullName)
+                        .padding()
+                        .background(lightGreyColor)
+                        .cornerRadius(5.0)
+                        .padding(.bottom, 20)
+                    TextField("Username", text: $username)
+                        .padding()
+                        .background(lightGreyColor)
+                        .cornerRadius(5.0)
+                        .padding(.bottom, 20)
+                    TextField("Email", text: $email)
+                        .padding()
+                        .background(lightGreyColor)
+                        .cornerRadius(5.0)
+                        .padding(.bottom, 20)
+                    SecureField("Password", text: $password)
+                        .padding()
+                        .background(lightGreyColor)
+                        .cornerRadius(5.0)
+                        .padding(.bottom, 20)
+                    
+                    Button(action: sendToDB){
+                        Text("Sign Up")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: 220, height: 60)
+                            .background(.green)
+                            .cornerRadius(15.0)
+                    }
+                }.padding()
+            case true:
+                ClassSelection()
             
-            Button(action: sendToDB){
-                Text("Sign Up")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(width: 220, height: 60)
-                    .background(.green)
-                    .cornerRadius(15.0)
-            }
-        }.padding()
+        }
+
     }
 }
 
