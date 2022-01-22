@@ -10,7 +10,7 @@ import CryptoKit
 import Firebase
 
 struct SignIn: View {
-    @State private var username: String = ""
+    @State var username: String = ""
     @State private var password: String = ""
     @State var loginSuccess: Bool = false
     func validateUser(){
@@ -32,33 +32,38 @@ struct SignIn: View {
     var body: some View {
         switch loginSuccess{
         case false:
-            VStack{
-                Text("Sign In")
-                    .fontWeight(.semibold)
-                    .font(.largeTitle)
-                    .padding(.bottom, 20)
-                TextField("Username", text: $username)
-                    .padding()
-                    .background(lightGreyColor)
-                    .cornerRadius(5.0)
-                    .padding(.bottom, 20)
-                SecureField("Password", text: $password)
-                    .padding()
-                    .background(lightGreyColor)
-                    .cornerRadius(5.0)
-                    .padding(.bottom, 20)
-                Button(action: validateUser){
+            NavigationView{
+                VStack{
                     Text("Sign In")
-                        .font(.headline)
-                        .foregroundColor(.white)
+                        .fontWeight(.semibold)
+                        .font(.largeTitle)
+                        .padding(.bottom, 20)
+                    TextField("Username", text: $username)
                         .padding()
-                        .frame(width: 220, height: 60)
-                        .background(.green)
-                        .cornerRadius(15.0)
-                }
+                        .background(lightGreyColor)
+                        .cornerRadius(5.0)
+                        .padding(.bottom, 20)
+                    SecureField("Password", text: $password)
+                        .padding()
+                        .background(lightGreyColor)
+                        .cornerRadius(5.0)
+                        .padding(.bottom, 20)
+                    Button(action: validateUser){
+                        Text("Sign In")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: 220, height: 60)
+                            .background(.green)
+                            .cornerRadius(15.0)
+                    }
+                    NavigationLink(destination: SignUp()){
+                        Text("Don't have an account? Sign up here!")
+                    }.padding()
+                }.padding()
             }.padding()
         case true:
-            HomeScreen()
+            AboutYou()
         }
 
     }

@@ -90,6 +90,7 @@ struct SignUp: View {
                 }.padding()
             case true:
                 AboutYou()
+                    .navigationBarBackButtonHidden(true)
             
         }
 

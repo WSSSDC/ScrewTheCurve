@@ -12,7 +12,7 @@ struct ScrewTheCurveApp: App {
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
     var body: some Scene {
         WindowGroup {
-            IntroScreen()
+            HomeScreen()
         }
     }
     class AppDelegate: NSObject, UIApplicationDelegate {

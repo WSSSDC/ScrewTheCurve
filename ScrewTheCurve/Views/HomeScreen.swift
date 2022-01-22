@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeScreen.swift
 //  ScrewTheCurve
 //
 //  Created by Bram Ogus on 2022-01-21.
@@ -8,9 +8,21 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView{
+            ClassSelection()
+                .tabItem{
+                    Image(systemName: "book")
+                    Text("Classes")
+                }
+            SignIn()
+                .tabItem{
+                    Image(systemName: "person.fill")
+                    Text("User Info")
+                }
+            
+        }
     }
 }
 
@@ -19,6 +31,3 @@ struct HomeScreen_Previews: PreviewProvider {
         HomeScreen()
     }
 }
-
-//
-// Tab view that contains class selection, message hub (new view), messsage hub goes to messages
