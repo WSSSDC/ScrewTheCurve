@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C7177CF279B9E2100C6A49A /* IntroScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177CE279B9E2100C6A49A /* IntroScreen.swift */; };
+		5C7177D1279B9E3500C6A49A /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177D0279B9E3500C6A49A /* SignUp.swift */; };
+		5C7177D3279B9E3C00C6A49A /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177D2279B9E3C00C6A49A /* SignIn.swift */; };
+		5C7177D5279B9E7500C6A49A /* ClassSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177D4279B9E7500C6A49A /* ClassSelection.swift */; };
+		5C7177D7279B9E8B00C6A49A /* ConnectionMade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177D6279B9E8B00C6A49A /* ConnectionMade.swift */; };
+		5C7177D9279B9EA100C6A49A /* Messaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177D8279B9EA100C6A49A /* Messaging.swift */; };
 		5CF4CBF1279B8CBB00BBE5F8 /* ScrewTheCurveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF4CBF0279B8CBB00BBE5F8 /* ScrewTheCurveApp.swift */; };
 		5CF4CBF3279B8CBB00BBE5F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF4CBF2279B8CBB00BBE5F8 /* ContentView.swift */; };
 		5CF4CBF5279B8CBB00BBE5F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF4CBF4279B8CBB00BBE5F8 /* Assets.xcassets */; };
@@ -14,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C7177CE279B9E2100C6A49A /* IntroScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScreen.swift; sourceTree = "<group>"; };
+		5C7177D0279B9E3500C6A49A /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		5C7177D2279B9E3C00C6A49A /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		5C7177D4279B9E7500C6A49A /* ClassSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSelection.swift; sourceTree = "<group>"; };
+		5C7177D6279B9E8B00C6A49A /* ConnectionMade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionMade.swift; sourceTree = "<group>"; };
+		5C7177D8279B9EA100C6A49A /* Messaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messaging.swift; sourceTree = "<group>"; };
 		5CF4CBED279B8CBB00BBE5F8 /* ScrewTheCurve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrewTheCurve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF4CBF0279B8CBB00BBE5F8 /* ScrewTheCurveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrewTheCurveApp.swift; sourceTree = "<group>"; };
 		5CF4CBF2279B8CBB00BBE5F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +49,12 @@
 			children = (
 				5CF4CBF0279B8CBB00BBE5F8 /* ScrewTheCurveApp.swift */,
 				5CF4CBF2279B8CBB00BBE5F8 /* ContentView.swift */,
+				5C7177CE279B9E2100C6A49A /* IntroScreen.swift */,
+				5C7177D0279B9E3500C6A49A /* SignUp.swift */,
+				5C7177D2279B9E3C00C6A49A /* SignIn.swift */,
+				5C7177D4279B9E7500C6A49A /* ClassSelection.swift */,
+				5C7177D6279B9E8B00C6A49A /* ConnectionMade.swift */,
+				5C7177D8279B9EA100C6A49A /* Messaging.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,7 +163,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7177D9279B9EA100C6A49A /* Messaging.swift in Sources */,
+				5C7177D3279B9E3C00C6A49A /* SignIn.swift in Sources */,
+				5C7177D5279B9E7500C6A49A /* ClassSelection.swift in Sources */,
 				5CF4CBF3279B8CBB00BBE5F8 /* ContentView.swift in Sources */,
+				5C7177CF279B9E2100C6A49A /* IntroScreen.swift in Sources */,
+				5C7177D7279B9E8B00C6A49A /* ConnectionMade.swift in Sources */,
+				5C7177D1279B9E3500C6A49A /* SignUp.swift in Sources */,
 				5CF4CBF1279B8CBB00BBE5F8 /* ScrewTheCurveApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
