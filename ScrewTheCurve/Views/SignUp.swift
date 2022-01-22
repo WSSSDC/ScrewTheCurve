@@ -23,11 +23,11 @@ func obfuscatePassword(_ password: String) -> String{
 }
 
 let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
-
 struct SignUp: View {
     struct User{
         var firstName: String
         var lastName: String
+        var username: String
         var email: String
         var password: String
     }
@@ -35,12 +35,13 @@ struct SignUp: View {
         let user = User(
             firstName: firstName,
             lastName: lastName,
+            username: username,
             email: email,
             password: obfuscatePassword(password));
-        
     }
     @State private var firstName: String = ""
     @State private var lastName: String = ""
+    @State private var username: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
     var body: some View {
@@ -55,6 +56,11 @@ struct SignUp: View {
                 .cornerRadius(5.0)
                 .padding(.bottom, 20)
             TextField("Last Name", text: $lastName)
+                .padding()
+                .background(lightGreyColor)
+                .cornerRadius(5.0)
+                .padding(.bottom, 20)
+            TextField("Username", text: $username)
                 .padding()
                 .background(lightGreyColor)
                 .cornerRadius(5.0)
