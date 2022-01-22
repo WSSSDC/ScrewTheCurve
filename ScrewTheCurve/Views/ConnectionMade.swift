@@ -28,7 +28,8 @@ struct ConnectionMade: View {
                             .offset(y:-85)
                         Image("profile1")
                             .resizable()
-                            .frame(width: 80.0, height: 80.0)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .frame(width: 100.0, height: 100.0)
                             .offset(y:-85)
                     }
                     ZStack {
@@ -39,7 +40,8 @@ struct ConnectionMade: View {
                             .offset(y:-85)
                         Image("profile2")
                             .resizable()
-                            .frame(width: 80.0, height: 80.0)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .frame(width: 100.0, height: 100.0)
                             .offset(y:-85)
                     }
                 }
