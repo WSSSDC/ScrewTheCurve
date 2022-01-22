@@ -21,6 +21,17 @@ struct HomeScreen: View {
                     Image(systemName: "person.fill")
                     Text("User Info")
                 }
+            FindConnections()
+                .tabItem{
+                    Image(systemName: "bonjour")
+                    Text("Make A Connection")
+                }
+            Connections()
+                .tabItem{
+                    Image(systemName: "wifi")
+                    Text("Connections")
+                }
+            
             
         }
     }
