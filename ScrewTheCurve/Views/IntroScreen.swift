@@ -28,7 +28,7 @@ struct IntroScreen: View {
                             .font(.subheadline)
                             .foregroundColor(.gray)
                     }.offset(x: 0, y: 100)
-                        NavigationLink(destination: SignUp()){
+                        NavigationLink(destination: SignIn()){
                             ZStack{
                             Circle()
                                 .fill(Color("nav_black"))
