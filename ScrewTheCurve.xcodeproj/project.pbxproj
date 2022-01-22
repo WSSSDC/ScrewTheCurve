@@ -20,7 +20,7 @@
 		5CF4CBF3279B8CBB00BBE5F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF4CBF2279B8CBB00BBE5F8 /* ContentView.swift */; };
 		5CF4CBF5279B8CBB00BBE5F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF4CBF4279B8CBB00BBE5F8 /* Assets.xcassets */; };
 		5CF4CBF8279B8CBB00BBE5F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF4CBF7279B8CBB00BBE5F8 /* Preview Assets.xcassets */; };
-		5CFA8CB7279C513200FF144E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CFA8CB6279C513200FF144E /* GoogleService-Info.plist */; };
+		B1A83437279C602E00CC8929 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1A83436279C602E00CC8929 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		5CF4CBF2279B8CBB00BBE5F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5CF4CBF4279B8CBB00BBE5F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CF4CBF7279B8CBB00BBE5F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5CFA8CB6279C513200FF144E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B1A83436279C602E00CC8929 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 		5CF4CBE4279B8CBB00BBE5F8 = {
 			isa = PBXGroup;
 			children = (
-				5CFA8CB6279C513200FF144E /* GoogleService-Info.plist */,
+				B1A83436279C602E00CC8929 /* GoogleService-Info.plist */,
 				5CF4CBEF279B8CBB00BBE5F8 /* ScrewTheCurve */,
 				5CF4CBEE279B8CBB00BBE5F8 /* Products */,
 			);
@@ -169,8 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CF4CBF8279B8CBB00BBE5F8 /* Preview Assets.xcassets in Resources */,
+				B1A83437279C602E00CC8929 /* GoogleService-Info.plist in Resources */,
 				5CF4CBF5279B8CBB00BBE5F8 /* Assets.xcassets in Resources */,
-				5CFA8CB7279C513200FF144E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

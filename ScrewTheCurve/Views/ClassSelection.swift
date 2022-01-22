@@ -34,8 +34,7 @@ struct ClassSelection: View {
         SchoolClass(id: 16, code: "FACC203"),
         SchoolClass(id: 17, code: "PHIl201"),
         SchoolClass(id: 18, code: "PHIl310"),
-        SchoolClass(id: 19, code: "DANK420"),
-        
+        SchoolClass(id: 19, code: "DANK420")
     ]
     var body: some View {
         NavigationView {
@@ -44,10 +43,11 @@ struct ClassSelection: View {
                     LazyVGrid(columns: columns, spacing: 10) {
                         ForEach(self.Hobbies) { SchoolClass in
                             Text(SchoolClass.code)
-                                .foregroundColor(.white)
+                                .foregroundColor(.black)
                                 .fontWeight(.bold)
                                 .frame(width: 180, height: 180)
-                                .background(Color.gray)
+                                .offset(y:55)
+                                .background(Color("bg_purple"))
                                 .cornerRadius(35)
                                 .layoutPriority(1)
                                 .matchedGeometryEffect(id: SchoolClass.id, in: self.namespace)
@@ -76,6 +76,7 @@ struct ClassSelection: View {
                             .foregroundColor(.white)
                             .fontWeight(.bold)
                             .frame(width: 180, height: 180)
+                            .offset(y:55)
                             .background(Color.pink)
                             .cornerRadius(35)
                             .layoutPriority(1)
