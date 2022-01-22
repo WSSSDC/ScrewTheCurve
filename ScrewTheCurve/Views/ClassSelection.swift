@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import simd
 
 struct ClassSelection: View {
 
@@ -16,32 +17,32 @@ struct ClassSelection: View {
 
     @State var selected: [SchoolClass] = []
     
-    @State var Hobbies: [SchoolClass] = [
-        SchoolClass(id: 1, code: "COMP102"),
-        SchoolClass(id: 2, code: "COMP189"),
-        SchoolClass(id: 3, code: "COMP199"),
-        SchoolClass(id: 4, code: "COMP208"),
-        SchoolClass(id: 5, code: "COMP322"),
-        SchoolClass(id: 6, code: "COMP303"),
-        SchoolClass(id: 7, code: "MATH150"),
-        SchoolClass(id: 8, code: "MATH151"),
-        SchoolClass(id: 9, code: "MATH180"),
-        SchoolClass(id: 10, code: "MATH235"),
-        SchoolClass(id: 12, code: "BIEN219"),
-        SchoolClass(id: 13, code: "BEIN300"),
-        SchoolClass(id: 14, code: "BEIN314"),
-        SchoolClass(id: 15, code: "FACC100"),
-        SchoolClass(id: 16, code: "FACC203"),
-        SchoolClass(id: 17, code: "PHIl201"),
-        SchoolClass(id: 18, code: "PHIl310"),
-        SchoolClass(id: 19, code: "DANK420")
+    @State var Classes: [SchoolClass] = [
+        SchoolClass(id: 1, code: "COMP102", symbol: "💻"),
+        SchoolClass(id: 2, code: "COMP189", symbol: "💻"),
+        SchoolClass(id: 3, code: "COMP199", symbol: "💻"),
+        SchoolClass(id: 4, code: "COMP208", symbol: "💻"),
+        SchoolClass(id: 5, code: "COMP322", symbol: "💻"),
+        SchoolClass(id: 6, code: "COMP303", symbol: "💻"),
+        SchoolClass(id: 7, code: "MATH150", symbol: "💻"),
+        SchoolClass(id: 8, code: "MATH151", symbol: "💻"),
+        SchoolClass(id: 9, code: "MATH180", symbol: "💻"),
+        SchoolClass(id: 10, code: "MATH235", symbol: "💻"),
+        SchoolClass(id: 12, code: "BIEN219", symbol: "💻"),
+        SchoolClass(id: 13, code: "BEIN300", symbol: "💻"),
+        SchoolClass(id: 14, code: "BEIN314", symbol: "💻"),
+        SchoolClass(id: 15, code: "FACC100", symbol: "💻"),
+        SchoolClass(id: 16, code: "FACC203", symbol: "💻"),
+        SchoolClass(id: 17, code: "PHIl201", symbol: "💻"),
+        SchoolClass(id: 18, code: "PHIl310", symbol: "💻"),
+        SchoolClass(id: 19, code: "DANK420", symbol: "💻")
     ]
     var body: some View {
         NavigationView {
             ScrollView {
-                if !self.Hobbies.isEmpty {
+                if !self.Classes.isEmpty {
                     LazyVGrid(columns: columns, spacing: 10) {
-                        ForEach(self.Hobbies) { SchoolClass in
+                        ForEach(self.Classes) { SchoolClass in
                             Text(SchoolClass.code)
                                 .foregroundColor(.black)
                                 .fontWeight(.bold)
@@ -53,11 +54,11 @@ struct ClassSelection: View {
                                 .matchedGeometryEffect(id: SchoolClass.id, in: self.namespace)
                                 .onTapGesture {
                                     self.selected.append(SchoolClass)
-                                    self.Hobbies.removeAll { (code) -> Bool in
+                                    self.Classes.removeAll { (code) -> Bool in
                                         if code.id == SchoolClass.id {return true}
                                         else
                                         {return false}
-                                }
+                            }
                         }
                     }
                 }.padding(8)
@@ -82,15 +83,15 @@ struct ClassSelection: View {
                             .layoutPriority(1)
                             .matchedGeometryEffect(id: SchoolClass.id, in: self.namespace)
                             .onTapGesture {
-                                self.Hobbies.append(SchoolClass)
+                                self.Classes.append(SchoolClass)
                                 self.selected.removeAll {
                                     (code) -> Bool in
                                     if code.id == SchoolClass.id
                                     {return true}
                                     else
                                     {return false}
-                                }
                             }
+                        }
                     }
                 }.padding(.all)
             }.navigationTitle("Classes")
@@ -102,6 +103,7 @@ struct ClassSelection: View {
 struct SchoolClass: Identifiable {
     var id: Int
     var code: String
+    var symbol: String
     
 }
 
