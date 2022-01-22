@@ -89,7 +89,7 @@ struct SignUp: View {
                     }
                 }.padding()
             case true:
-                ClassSelection()
+                AboutYou()
             
         }
 
