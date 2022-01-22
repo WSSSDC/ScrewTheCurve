@@ -94,8 +94,8 @@ struct ClassSelection: View {
                             }
                         }
                     }
-                }.padding(.all)
-            }.navigationTitle("Classes").ignoresSafeArea(edges: .top)
+                }.padding(.all).ignoresSafeArea(edges: .top)
+            }.navigationTitle("Classes")
             
         }
     }
