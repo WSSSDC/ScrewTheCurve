@@ -16,6 +16,7 @@
 		5CEC6FA2279C4CD8004E1C13 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5CEC6FA1279C4CD8004E1C13 /* FirebaseAuth */; };
 		5CEC6FA4279C4CD8004E1C13 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5CEC6FA3279C4CD8004E1C13 /* FirebaseFirestore */; };
 		5CEC6FA6279C4CD8004E1C13 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 5CEC6FA5279C4CD8004E1C13 /* FirebaseFunctions */; };
+		5CEC6FA8279C4E01004E1C13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CEC6FA7279C4E01004E1C13 /* GoogleService-Info.plist */; };
 		5CF4CBF1279B8CBB00BBE5F8 /* ScrewTheCurveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF4CBF0279B8CBB00BBE5F8 /* ScrewTheCurveApp.swift */; };
 		5CF4CBF3279B8CBB00BBE5F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF4CBF2279B8CBB00BBE5F8 /* ContentView.swift */; };
 		5CF4CBF5279B8CBB00BBE5F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF4CBF4279B8CBB00BBE5F8 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		5C7177D4279B9E7500C6A49A /* ClassSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSelection.swift; sourceTree = "<group>"; };
 		5C7177D6279B9E8B00C6A49A /* ConnectionMade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionMade.swift; sourceTree = "<group>"; };
 		5C7177D8279B9EA100C6A49A /* Messaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messaging.swift; sourceTree = "<group>"; };
+		5CEC6FA7279C4E01004E1C13 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5CF4CBED279B8CBB00BBE5F8 /* ScrewTheCurve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrewTheCurve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF4CBF0279B8CBB00BBE5F8 /* ScrewTheCurveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrewTheCurveApp.swift; sourceTree = "<group>"; };
 		5CF4CBF2279B8CBB00BBE5F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		5CF4CBE4279B8CBB00BBE5F8 = {
 			isa = PBXGroup;
 			children = (
+				5CEC6FA7279C4E01004E1C13 /* GoogleService-Info.plist */,
 				5CF4CBEF279B8CBB00BBE5F8 /* ScrewTheCurve */,
 				5CF4CBEE279B8CBB00BBE5F8 /* Products */,
 			);
@@ -167,6 +170,7 @@
 			files = (
 				5CF4CBF8279B8CBB00BBE5F8 /* Preview Assets.xcassets in Resources */,
 				5CF4CBF5279B8CBB00BBE5F8 /* Assets.xcassets in Resources */,
+				5CEC6FA8279C4E01004E1C13 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

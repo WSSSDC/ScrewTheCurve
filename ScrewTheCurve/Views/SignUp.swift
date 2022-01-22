@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CryptoKit
+import Firebase
 
 extension Digest {
     var bytes: [UInt8] { Array(makeIterator()) }
