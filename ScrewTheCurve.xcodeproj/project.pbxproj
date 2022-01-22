@@ -13,6 +13,9 @@
 		5C7177D5279B9E7500C6A49A /* ClassSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177D4279B9E7500C6A49A /* ClassSelection.swift */; };
 		5C7177D7279B9E8B00C6A49A /* ConnectionMade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177D6279B9E8B00C6A49A /* ConnectionMade.swift */; };
 		5C7177D9279B9EA100C6A49A /* Messaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177D8279B9EA100C6A49A /* Messaging.swift */; };
+		5CEC6FA2279C4CD8004E1C13 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5CEC6FA1279C4CD8004E1C13 /* FirebaseAuth */; };
+		5CEC6FA4279C4CD8004E1C13 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5CEC6FA3279C4CD8004E1C13 /* FirebaseFirestore */; };
+		5CEC6FA6279C4CD8004E1C13 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 5CEC6FA5279C4CD8004E1C13 /* FirebaseFunctions */; };
 		5CF4CBF1279B8CBB00BBE5F8 /* ScrewTheCurveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF4CBF0279B8CBB00BBE5F8 /* ScrewTheCurveApp.swift */; };
 		5CF4CBF3279B8CBB00BBE5F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF4CBF2279B8CBB00BBE5F8 /* ContentView.swift */; };
 		5CF4CBF5279B8CBB00BBE5F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF4CBF4279B8CBB00BBE5F8 /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CEC6FA6279C4CD8004E1C13 /* FirebaseFunctions in Frameworks */,
+				5CEC6FA2279C4CD8004E1C13 /* FirebaseAuth in Frameworks */,
+				5CEC6FA4279C4CD8004E1C13 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +115,11 @@
 			dependencies = (
 			);
 			name = ScrewTheCurve;
+			packageProductDependencies = (
+				5CEC6FA1279C4CD8004E1C13 /* FirebaseAuth */,
+				5CEC6FA3279C4CD8004E1C13 /* FirebaseFirestore */,
+				5CEC6FA5279C4CD8004E1C13 /* FirebaseFunctions */,
+			);
 			productName = ScrewTheCurve;
 			productReference = 5CF4CBED279B8CBB00BBE5F8 /* ScrewTheCurve.app */;
 			productType = "com.apple.product-type.application";
@@ -137,6 +148,9 @@
 				Base,
 			);
 			mainGroup = 5CF4CBE4279B8CBB00BBE5F8;
+			packageReferences = (
+				5CEC6FA0279C4CD8004E1C13 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 5CF4CBEE279B8CBB00BBE5F8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -373,6 +387,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5CEC6FA0279C4CD8004E1C13 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5CEC6FA1279C4CD8004E1C13 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CEC6FA0279C4CD8004E1C13 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		5CEC6FA3279C4CD8004E1C13 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CEC6FA0279C4CD8004E1C13 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		5CEC6FA5279C4CD8004E1C13 /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CEC6FA0279C4CD8004E1C13 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5CF4CBE5279B8CBB00BBE5F8 /* Project object */;
 }
