@@ -8,8 +8,12 @@
 
 import SwiftUI
 import simd
+import Firebase
 
 struct ClassSelection: View {
+    func databaseUpdate(){
+        let db = Firestore.firestore()
+    }
 
     var columns = Array(repeating: GridItem(.flexible(), spacing: 10), count: 2)
     
@@ -40,72 +44,46 @@ struct ClassSelection: View {
     ]
     var body: some View {
         NavigationView {
-            ScrollView {
-                if !self.Classes.isEmpty {
+            ZStack{
+                
+                ScrollView {
                     LazyVGrid(columns: columns, spacing: 10) {
-                        ForEach(self.Classes) { SchoolClass in
-                            Text(SchoolClass.code)
+                        ForEach(0..<Classes.count) {index in
+                            Text(Classes[index].code)
                                 .foregroundColor(.black)
                                 .fontWeight(.bold)
                                 .frame(width: 180, height: 180)
-                                .offset(y:55)
-                                .background(Color("bg_purple"))
+                                .background(Classes[index].isSelected ? .pink : Color("bg_purple"))
                                 .cornerRadius(35)
                                 .layoutPriority(1)
-                                .matchedGeometryEffect(id: SchoolClass.id, in: self.namespace)
+                                .matchedGeometryEffect(id: Classes[index].id, in: self.namespace)
                                 .onTapGesture {
-                                    self.selected.append(SchoolClass)
-                                    self.Classes.removeAll { (code) -> Bool in
-                                        if code.id == SchoolClass.id {return true}
-                                        else
-                                        {return false}
+                                    Classes[index].isSelected.toggle()
+                                    print(Classes[index])
                             }
                         }
-                    }
-                }.padding(10)
+                    }.padding(10)
+                }.navigationTitle("Classes")
+                Button(action: databaseUpdate){
+                    Text("Confirm")
+                        .foregroundColor(.white)
+                        .font(.title)
+                        .frame(width: 300)
+                        .padding(10)
+                        .background(Color("nav_black"))
+                        .cornerRadius(40)
+                }.offset(y: 350)
             }
-                HStack {
-                    Text("Current Classes")
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
-                    Spacer()
-                }
-                .padding(.horizontal)
-                
-                LazyVGrid(columns: columns, spacing: 10) {
-                    ForEach(self.selected) { SchoolClass in
-                        Text(SchoolClass.code)
-                            .foregroundColor(.white)
-                            .fontWeight(.bold)
-                            .frame(width: 180, height: 180)
-                            .offset(y:55)
-                            .background(Color.pink)
-                            .cornerRadius(35)
-                            .layoutPriority(1)
-                            .matchedGeometryEffect(id: SchoolClass.id, in: self.namespace)
-                            .onTapGesture {
-                                self.Classes.append(SchoolClass)
-                                self.selected.removeAll {
-                                    (code) -> Bool in
-                                    if code.id == SchoolClass.id
-                                    {return true}
-                                    else
-                                    {return false}
-                            }
-                        }
-                    }
-                }.padding(.all).ignoresSafeArea(edges: .top)
-            }.navigationTitle("Classes")
-            
         }
     }
 }
+
 
 struct SchoolClass: Identifiable {
     var id: Int
     var code: String
     var symbol: String
-    
+    var isSelected: Bool = false
 }
 
 struct ClassSelection_Previews: PreviewProvider {
