@@ -7,15 +7,18 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeScreen: View {
     var body: some View {
         Text("Hello, world!")
             .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeScreen()
     }
 }
+
+//
+// Tab view that contains class selection, message hub (new view), messsage hub goes to messages

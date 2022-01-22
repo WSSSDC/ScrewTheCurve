@@ -4,6 +4,7 @@
 //
 //  Created by Bram Ogus on 2022-01-21.
 //
+// Make sure that when someone selects a class, its added to the database
 
 import SwiftUI
 import simd

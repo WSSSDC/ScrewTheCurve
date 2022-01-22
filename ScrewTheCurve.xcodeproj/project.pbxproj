@@ -17,10 +17,11 @@
 		5CEC6FA4279C4CD8004E1C13 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5CEC6FA3279C4CD8004E1C13 /* FirebaseFirestore */; };
 		5CEC6FA6279C4CD8004E1C13 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 5CEC6FA5279C4CD8004E1C13 /* FirebaseFunctions */; };
 		5CF4CBF1279B8CBB00BBE5F8 /* ScrewTheCurveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF4CBF0279B8CBB00BBE5F8 /* ScrewTheCurveApp.swift */; };
-		5CF4CBF3279B8CBB00BBE5F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF4CBF2279B8CBB00BBE5F8 /* ContentView.swift */; };
+		5CF4CBF3279B8CBB00BBE5F8 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF4CBF2279B8CBB00BBE5F8 /* HomeScreen.swift */; };
 		5CF4CBF5279B8CBB00BBE5F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF4CBF4279B8CBB00BBE5F8 /* Assets.xcassets */; };
 		5CF4CBF8279B8CBB00BBE5F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF4CBF7279B8CBB00BBE5F8 /* Preview Assets.xcassets */; };
 		B1A83437279C602E00CC8929 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1A83436279C602E00CC8929 /* GoogleService-Info.plist */; };
+		B1A83439279C87AC00CC8929 /* MessageHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A83438279C87AC00CC8929 /* MessageHub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +33,11 @@
 		5C7177D8279B9EA100C6A49A /* Messaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messaging.swift; sourceTree = "<group>"; };
 		5CF4CBED279B8CBB00BBE5F8 /* ScrewTheCurve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrewTheCurve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF4CBF0279B8CBB00BBE5F8 /* ScrewTheCurveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrewTheCurveApp.swift; sourceTree = "<group>"; };
-		5CF4CBF2279B8CBB00BBE5F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5CF4CBF2279B8CBB00BBE5F8 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		5CF4CBF4279B8CBB00BBE5F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CF4CBF7279B8CBB00BBE5F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B1A83436279C602E00CC8929 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B1A83438279C87AC00CC8929 /* MessageHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +57,14 @@
 		5C7177CD279B8E3500C6A49A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5CF4CBF2279B8CBB00BBE5F8 /* ContentView.swift */,
+				5CF4CBF2279B8CBB00BBE5F8 /* HomeScreen.swift */,
 				5C7177CE279B9E2100C6A49A /* IntroScreen.swift */,
 				5C7177D0279B9E3500C6A49A /* SignUp.swift */,
 				5C7177D2279B9E3C00C6A49A /* SignIn.swift */,
 				5C7177D4279B9E7500C6A49A /* ClassSelection.swift */,
 				5C7177D6279B9E8B00C6A49A /* ConnectionMade.swift */,
 				5C7177D8279B9EA100C6A49A /* Messaging.swift */,
+				B1A83438279C87AC00CC8929 /* MessageHub.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -87,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				5CF4CBF0279B8CBB00BBE5F8 /* ScrewTheCurveApp.swift */,
-				5CFA8CB6279C513200FF144E /* GoogleService-Info.plist */,
 				5C7177CD279B8E3500C6A49A /* Views */,
 				5CF4CBF4279B8CBB00BBE5F8 /* Assets.xcassets */,
 				5CF4CBF6279B8CBB00BBE5F8 /* Preview Content */,
@@ -185,8 +187,9 @@
 				5C7177D9279B9EA100C6A49A /* Messaging.swift in Sources */,
 				5C7177D3279B9E3C00C6A49A /* SignIn.swift in Sources */,
 				5C7177D5279B9E7500C6A49A /* ClassSelection.swift in Sources */,
-				5CF4CBF3279B8CBB00BBE5F8 /* ContentView.swift in Sources */,
+				5CF4CBF3279B8CBB00BBE5F8 /* HomeScreen.swift in Sources */,
 				5C7177CF279B9E2100C6A49A /* IntroScreen.swift in Sources */,
+				B1A83439279C87AC00CC8929 /* MessageHub.swift in Sources */,
 				5C7177D7279B9E8B00C6A49A /* ConnectionMade.swift in Sources */,
 				5C7177D1279B9E3500C6A49A /* SignUp.swift in Sources */,
 				5CF4CBF1279B8CBB00BBE5F8 /* ScrewTheCurveApp.swift in Sources */,
