@@ -9,6 +9,7 @@ import SwiftUI
 import CryptoKit
 import Firebase
 
+
 extension Digest {
     var bytes: [UInt8] { Array(makeIterator()) }
     var data: Data { Data(bytes) }
@@ -25,22 +26,21 @@ func obfuscatePassword(_ password: String) -> String{
 let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
 struct SignUp: View {
     struct User{
-        var firstName: String
-        var lastName: String
+        var fullName: String
         var username: String
         var email: String
         var password: String
     }
     func sendToDB(){
         let user = User(
-            firstName: firstName,
-            lastName: lastName,
+            fullName: fullName,
             username: username,
             email: email,
             password: obfuscatePassword(password));
+        let db = Firestore.firestore()
+        
     }
-    @State private var firstName: String = ""
-    @State private var lastName: String = ""
+    @State private var fullName: String = ""
     @State private var username: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
@@ -50,12 +50,7 @@ struct SignUp: View {
                 .font(.largeTitle)
                 .fontWeight(.semibold)
                 .padding(.bottom, 20)
-            TextField("First Name", text: $firstName)
-                .padding()
-                .background(lightGreyColor)
-                .cornerRadius(5.0)
-                .padding(.bottom, 20)
-            TextField("Last Name", text: $lastName)
+            TextField("Full Name", text: $fullName)
                 .padding()
                 .background(lightGreyColor)
                 .cornerRadius(5.0)

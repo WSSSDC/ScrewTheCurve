@@ -14,7 +14,7 @@ struct ScrewTheCurveApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            IntroScreen()
         }
     }
     
