@@ -9,7 +9,84 @@ import SwiftUI
 
 struct ConnectionMade: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color("bg_purple")
+                .ignoresSafeArea()
+            VStack {
+                Text("You're connected with Arjun Sarao!")
+                    .font(.system(size: 35))
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                Spacer()
+                ZStack {
+                    RoundedRectangle(cornerRadius: 25)
+                        .fill(Color.white)
+                        .frame(width: 400, height: 400)
+                    Text("Arjun Sarao, 18")
+                        .font(.system(size: 40))
+                        .offset(x: -55, y:-150)
+                    Text("Hello, I am a 2nd yea Data Science student, I am looking for friends to learn and work on projects with!")
+                        .font(.system(size: 25))
+                        .padding()
+                        .offset(y:-70)
+                    HStack {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 25)
+                                .fill(Color.red)
+                                .opacity(0.4)
+                                .frame(width: 90, height: 30)
+                            Text("MAT137")
+                        }
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 25)
+                                .fill(Color.green)
+                                .opacity(0.4)
+                                .frame(width: 90, height: 30)
+                            Text("CS135")
+                        }
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 25)
+                                .fill(Color.blue)
+                                .opacity(0.4)
+                                .frame(width: 90, height: 30)
+                            Text("DANK420")
+                        }
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 25)
+                                .fill(Color.orange)
+                                .opacity(0.4)
+                                .frame(width: 90, height: 30)
+                            Text("STAT231")
+                        }
+                    }
+                    NavigationLink(destination: SignIn()) {
+                        HStack {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 25)
+                                    .fill(Color.red)
+                                    .frame(width: 170, height: 75)
+                                    .offset(y:140)
+                                Text("Pass")
+                                    .font(.system(size: 25))
+                                    .foregroundColor(Color.white)
+                                    .offset(y:140)
+                            }
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 25)
+                                    .fill(Color.green)
+                                    .frame(width: 170, height: 75)
+                                    .offset(y:140)
+                                Text("Yes!")
+                                    .font(.system(size: 25))
+                                    .foregroundColor(Color.white)
+                                    .offset(y:140)
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
