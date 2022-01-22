@@ -62,7 +62,7 @@ struct ClassSelection: View {
                             }
                         }
                     }
-                }.padding(8)
+                }.padding(10)
             }
                 HStack {
                     Text("Current Classes")
@@ -95,7 +95,7 @@ struct ClassSelection: View {
                         }
                     }
                 }.padding(.all)
-            }.navigationTitle("Classes")
+            }.navigationTitle("Classes").ignoresSafeArea(edges: .top)
             
         }
     }
