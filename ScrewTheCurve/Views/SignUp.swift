@@ -25,15 +25,21 @@ func obfuscatePassword(_ password: String) -> String{
 
 let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
 struct SignUp: View {
-    func sendToDB(){
+    func createUser(){
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, err in
+            if let err = err{
+                print("Error with auth \(err)")
+            }else{
+                print("Auth Successful")
+            }
+        }
         let db = Firestore.firestore()
         db.collection("Users")
-            .document(username)
+            .document(Auth.auth().currentUser?.email! ?? "")
             .setData(
                 ["Full Name": fullName,
-                 "Username": username,
-                 "Email": email,
-                 "Password": obfuscatePassword(password),
+                 "Connections": [],
+                 "Classes": []
                 ]
             ){ err in
                 if let err = err {
@@ -45,7 +51,6 @@ struct SignUp: View {
             }
     }
     @State var fullName: String = ""
-    @State var username: String = ""
     @State var email: String = ""
     @State var password: String = ""
     @State var signUpSuccess: Bool = false
@@ -57,28 +62,27 @@ struct SignUp: View {
                         .font(.largeTitle)
                         .fontWeight(.semibold)
                         .padding(.bottom, 20)
+                        
                     TextField("Full Name", text: $fullName)
                         .padding()
                         .background(lightGreyColor)
                         .cornerRadius(5.0)
                         .padding(.bottom, 20)
-                    TextField("Username", text: $username)
-                        .padding()
-                        .background(lightGreyColor)
-                        .cornerRadius(5.0)
-                        .padding(.bottom, 20)
+                        .disableAutocorrection(true)
                     TextField("Email", text: $email)
                         .padding()
                         .background(lightGreyColor)
                         .cornerRadius(5.0)
                         .padding(.bottom, 20)
+                        .disableAutocorrection(true)
                     SecureField("Password", text: $password)
                         .padding()
                         .background(lightGreyColor)
                         .cornerRadius(5.0)
                         .padding(.bottom, 20)
+                        .disableAutocorrection(true)
                     
-                    Button(action: sendToDB){
+                    Button(action: createUser){
                         Text("Sign Up")
                             .font(.headline)
                             .foregroundColor(.white)

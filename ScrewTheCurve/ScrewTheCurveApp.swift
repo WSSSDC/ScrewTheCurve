@@ -18,13 +18,13 @@ struct ScrewTheCurveApp: App {
     class AppDelegate: NSObject, UIApplicationDelegate {
       func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
           FirebaseApp.configure(options: .defaultOptions()!)
-          Auth.auth().signInAnonymously { authResult, err in
-              if let err = err{
-                  print("Error with auth \(err)")
-              }else{
-                  print("Auth Successful")
-              }
-          }
+//          Auth.auth().signInAnonymously { authResult, err in
+//              if let err = err{
+//                  print("Error with auth \(err)")
+//              }else{
+//                  print("Auth Successful")
+//              }
+//          }
         return true
       }
     }

@@ -10,22 +10,17 @@ import CryptoKit
 import Firebase
 
 struct SignIn: View {
-    @State var username: String = ""
+    @State var email: String = ""
     @State private var password: String = ""
     @State var loginSuccess: Bool = false
     func validateUser(){
-        let db = Firestore.firestore()
-        let docRef = db.collection("Users").document(username)
-        docRef.getDocument { (document, error) in
-            if let document = document, document.exists {
-                if document.get("Password") as! String == obfuscatePassword(password){
-                    print("Login Successful")
-                    loginSuccess = true
-                }
+        Auth.auth().signIn(withEmail: email, password: password) {authResult, error in
+            if error != nil{
+                print(error ?? "")
             }else{
-                print("Document does not exist")
+                print("Success")
+                loginSuccess = true
             }
-            
         }
         
     }
@@ -38,11 +33,12 @@ struct SignIn: View {
                         .fontWeight(.semibold)
                         .font(.largeTitle)
                         .padding(.bottom, 20)
-                    TextField("Username", text: $username)
+                    TextField("Email", text: $email)
                         .padding()
                         .background(lightGreyColor)
                         .cornerRadius(5.0)
                         .padding(.bottom, 20)
+                        .disableAutocorrection(true)
                     SecureField("Password", text: $password)
                         .padding()
                         .background(lightGreyColor)
