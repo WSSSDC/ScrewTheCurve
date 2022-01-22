@@ -27,20 +27,21 @@ let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255
 struct SignUp: View {
     func sendToDB(){
         let db = Firestore.firestore()
-        var ref: DocumentReference? = nil
-        ref = db.collection("Users").addDocument(data: [
-            "name": fullName,
-            "username": username,
-            "email": email,
-            "password": obfuscatePassword(password)
-        ]){err in
-            if let err = err{
-                print("Error adding document: \(err)")
-            }else{
-                print("Document with ID: \(ref!.documentID)")
+        db.collection("Users")
+            .document(username)
+            .setData(
+                ["Full Name": fullName,
+                 "Username": username,
+                 "Email": email,
+                 "Password": obfuscatePassword(password),
+                ]
+            ){ err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Document successfully written!")
+                }
             }
-            
-        }
         
         
     }
