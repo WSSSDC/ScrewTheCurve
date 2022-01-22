@@ -50,7 +50,7 @@ struct ConnectionMade: View {
                     Text("Arjun Sarao, 18")
                         .font(.system(size: 40))
                         .offset(x: -55, y:-150)
-                    Text("Hello, I am a 2nd yea Data Science student, I am looking for friends to learn and work on projects with!")
+                    Text("Hello, I am a 2nd year Data Science student, I am looking for friends to learn and work on projects with!")
                         .font(.system(size: 25))
                         .padding()
                         .offset(y:-70)
