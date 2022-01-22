@@ -2,7 +2,7 @@
 //  AboutYou.swift
 //  ScrewTheCurve
 //
-//  Created by Arjun  Sarao on 2022-01-22.
+//  Created by Arjun Sarao on 2022-01-22.
 //
 
 import SwiftUI

@@ -19,6 +19,30 @@ struct ConnectionMade: View {
                     .multilineTextAlignment(.center)
                     .padding()
                 Spacer()
+                HStack {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(Color.white)
+                            .frame(width: 100, height: 100)
+                            .padding()
+                            .offset(y:-85)
+                        Image("profile1")
+                            .resizable()
+                            .frame(width: 80.0, height: 80.0)
+                            .offset(y:-85)
+                    }
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(Color.white)
+                            .frame(width: 100, height: 100)
+                            .padding()
+                            .offset(y:-85)
+                        Image("profile2")
+                            .resizable()
+                            .frame(width: 80.0, height: 80.0)
+                            .offset(y:-85)
+                    }
+                }
                 ZStack {
                     RoundedRectangle(cornerRadius: 25)
                         .fill(Color.white)
