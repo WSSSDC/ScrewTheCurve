@@ -25,19 +25,23 @@ func obfuscatePassword(_ password: String) -> String{
 
 let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
 struct SignUp: View {
-    struct User{
-        var fullName: String
-        var username: String
-        var email: String
-        var password: String
-    }
     func sendToDB(){
-        let user = User(
-            fullName: fullName,
-            username: username,
-            email: email,
-            password: obfuscatePassword(password));
         let db = Firestore.firestore()
+        var ref: DocumentReference? = nil
+        ref = db.collection("Users").addDocument(data: [
+            "name": fullName,
+            "username": username,
+            "email": email,
+            "password": obfuscatePassword(password)
+        ]){err in
+            if let err = err{
+                print("Error adding document: \(err)")
+            }else{
+                print("Document with ID: \(ref!.documentID)")
+            }
+            
+        }
+        
         
     }
     @State private var fullName: String = ""
