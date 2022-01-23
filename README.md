@@ -56,6 +56,11 @@ Users create an account using their emails. They can then flesh out a small prof
 
 ## 🖼 Gallery
 
+![introscreen](https://user-images.githubusercontent.com/47152801/150665849-2612e4dc-fb0c-46c8-b5a7-ebf4886cbc9f.png)
+![sign_up](https://user-images.githubusercontent.com/47152801/150665863-b612347d-2d80-42d9-8ef4-687bc4bcf862.png)
+![class_selection](https://user-images.githubusercontent.com/47152801/150665850-c638321f-e191-4723-a417-b3fb8b0b8bb0.png)
+![connections](https://user-images.githubusercontent.com/47152801/150665848-dc1bf279-7561-4386-a886-53d6cf7fe436.png)
+![connection_made](https://user-images.githubusercontent.com/47152801/150665860-6b38f0d7-6ea9-41f0-9605-30416749db91.png)
 
 ## 💻 Lines of Code
 
