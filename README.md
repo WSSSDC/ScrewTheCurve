@@ -63,7 +63,7 @@ Users create an account using their emails. They can then flesh out a small prof
 
 ## 💻 Lines of Code
 
-- 775 Lines of Swift Code
+- 846 Lines of Swift Code
 
 ## 🙇‍♂️ Acknowledgements
 
