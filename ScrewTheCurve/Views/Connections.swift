@@ -30,6 +30,7 @@ func getConnections() -> [Connection]{
     return data
 }
 struct Connections: View {
+    @State var showModal: Bool = false
     var body: some View {
         ScrollView{
             ZStack {
@@ -78,13 +79,21 @@ struct Connections: View {
                         Text("STAT231")
                     }
                 }.offset(y:250)
+                
                 ZStack{
-                    RoundedRectangle(cornerRadius: 25)
-                        .fill(Color.blue)
-                        .opacity(0.4)
-                        .frame(width: 350, height: 30)
-                    Text("Send Message")
-                }.offset(y: 325)
+                    Button(action: {showModal = true}){
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 25)
+                                .fill(Color.blue)
+                                .opacity(0.4)
+                                .frame(width: 350, height: 30)
+                            Text("Socials")
+                        }
+                    }.offset(y: 325)
+                        .sheet(isPresented: $showModal){
+                            SocialList()
+                        }
+                }
             }.padding()
         }
     }
