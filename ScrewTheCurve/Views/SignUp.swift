@@ -39,7 +39,8 @@ struct SignUp: View {
             .setData(
                 ["Full Name": fullName,
                  "Connections": [],
-                 "Classes": []
+                 "Classes": [],
+                 "Bio": ""
                 ]
             ){ err in
                 if let err = err {

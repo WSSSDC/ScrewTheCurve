@@ -70,7 +70,7 @@ struct FindConnections: View {
                 Text("Bram Ogus, 21")
                     .font(.system(size: 35))
                     .offset(x:-80, y:80)
-                Text("Yo, I'm a 4th year Math student, dm if u want me to screw more than just the lin-alg curve")
+                Text("4th year math student, looking for someone to study with")
                     .font(.system(size: 25))
                     .padding()
                     .offset(y:160)
