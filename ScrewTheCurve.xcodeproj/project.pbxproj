@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C3ADBD9279CE4D000950948 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3ADBD8279CE4D000950948 /* UserSettings.swift */; };
 		5C7177CF279B9E2100C6A49A /* IntroScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177CE279B9E2100C6A49A /* IntroScreen.swift */; };
 		5C7177D1279B9E3500C6A49A /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177D0279B9E3500C6A49A /* SignUp.swift */; };
 		5C7177D3279B9E3C00C6A49A /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177D2279B9E3C00C6A49A /* SignIn.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C3ADBD8279CE4D000950948 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		5C7177CE279B9E2100C6A49A /* IntroScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScreen.swift; sourceTree = "<group>"; };
 		5C7177D0279B9E3500C6A49A /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		5C7177D2279B9E3C00C6A49A /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				5C7177D6279B9E8B00C6A49A /* ConnectionMade.swift */,
 				5CFA8CBC279CB0DB00FF144E /* FindConnections.swift */,
 				5CFA8CBE279CB16600FF144E /* Connections.swift */,
+				5C3ADBD8279CE4D000950948 /* UserSettings.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				5CFA8CBF279CB16600FF144E /* Connections.swift in Sources */,
 				5C7177D1279B9E3500C6A49A /* SignUp.swift in Sources */,
 				5CF4CBF1279B8CBB00BBE5F8 /* ScrewTheCurveApp.swift in Sources */,
+				5C3ADBD9279CE4D000950948 /* UserSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

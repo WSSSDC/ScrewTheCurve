@@ -32,6 +32,11 @@ struct HomeScreen: View {
                     Text("Connections")
                 }
             
+            UserSettings()
+                .tabItem {
+                    Image(systemName: "gear.circle")
+                    Text("Settings")
+                }
             
         }
     }

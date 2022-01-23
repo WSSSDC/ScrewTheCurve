@@ -8,15 +8,7 @@
 import SwiftUI
 import Firebase
 struct AboutYou: View {
-    
-    func outtaHere(){
-        let firebaseAuth = Firebase.Auth.auth()
-        do {
-          try firebaseAuth.signOut()
-        } catch let signOutError as NSError {
-          print("Error signing out: %@", signOutError)
-        }
-    }
+
     @State private var biography: String = ""
     var body: some View {
         ZStack {
@@ -39,17 +31,7 @@ struct AboutYou: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                     .offset(y: -200)
-                Button(action: outtaHere){
-                    Text("Sign Out")
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .frame(width: 300)
-                        .padding(10)
-                        .background(Color("nav_black"))
-                        .cornerRadius(40)
-                }.offset(y: 200)
             }.padding()
-
     }
 }
 
