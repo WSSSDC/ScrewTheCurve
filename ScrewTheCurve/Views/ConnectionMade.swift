@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ConnectionMade: View {
     var body: some View {
+        NavigationView{
         ZStack {
             Color("bg_purple")
                 .ignoresSafeArea()
@@ -86,7 +87,6 @@ struct ConnectionMade: View {
                             Text("STAT231")
                         }
                     }
-                    NavigationLink(destination: SignIn()) {
                         HStack {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 25)
@@ -99,14 +99,17 @@ struct ConnectionMade: View {
                                     .offset(y:140)
                             }
                             ZStack {
-                                RoundedRectangle(cornerRadius: 25)
-                                    .fill(Color.green)
-                                    .frame(width: 170, height: 75)
-                                    .offset(y:140)
-                                Text("Yes!")
-                                    .font(.system(size: 25))
-                                    .foregroundColor(Color.white)
-                                    .offset(y:140)
+                                NavigationLink(destination: HomeScreen()){
+                                    RoundedRectangle(cornerRadius: 25)
+                                        .fill(Color.green)
+                                        .frame(width: 170, height: 75)
+                                        .overlay(
+                                            Text("Yes!")
+                                                .font(.system(size: 25))
+                                                .foregroundColor(Color.white)
+                                        )
+
+                                }.offset(y:140)
                             }
                         }
                     }
