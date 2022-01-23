@@ -16,8 +16,6 @@ struct AboutYou: View {
         } catch let signOutError as NSError {
           print("Error signing out: %@", signOutError)
         }
-        
-
     }
     @State private var biography: String = ""
     var body: some View {
@@ -29,19 +27,18 @@ struct AboutYou: View {
                     .font(.system(size: 35))
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
-
-                Spacer()
+                    .offset(y:-200)
+                    .padding()
                 Image("profile1")
                     .resizable()
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                     .frame(width: 150.0, height: 150.0)
-                    .offset(y:-550)
-                Text("Bio")
-                    .offset(x:-170, y:-550)
-                    .font(.system(size: 25))
-                TextField("Please enter a short about your here:", text: $biography)
-                    .offset(x:20, y:-550)
+                    .offset(y: -200)
+                    .padding()
+                TextField("Please enter a short bio here:", text: $biography)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                    .offset(y: -200)
                 Button(action: outtaHere){
                     Text("Sign Out")
                         .foregroundColor(.white)
@@ -50,8 +47,8 @@ struct AboutYou: View {
                         .padding(10)
                         .background(Color("nav_black"))
                         .cornerRadius(40)
-                }
-        }
+                }.offset(y: 200)
+            }.padding()
 
     }
 }

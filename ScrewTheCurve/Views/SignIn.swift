@@ -12,20 +12,26 @@ import Firebase
 struct SignIn: View {
     @State var email: String = ""
     @State private var password: String = ""
-    @State var loginSuccess: Bool = false
+    @State var loggedIn: Bool = false
     func validateUser(){
         Auth.auth().signIn(withEmail: email, password: password) {authResult, error in
             if error != nil{
                 print(error ?? "")
             }else{
                 print("Success")
-                loginSuccess = true
             }
         }
         
     }
     var body: some View {
-        switch loginSuccess{
+        let _ = Firebase.Auth.auth().addStateDidChangeListener { auth, user in
+            if user != nil{
+                loggedIn = true
+            }else{
+                loggedIn = false
+            }
+         }
+        switch loggedIn{
         case false:
             NavigationView{
                 VStack{
