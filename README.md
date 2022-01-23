@@ -6,15 +6,15 @@
 
 ## 💡 Inspiration
 
-We wanted to create an app that would allow students to be easily connected based on shared classes and exam scores. This can be useful creating study groups, finding group assignment partners or even complaining about tests.
+We wanted to create an app that would allow students to be easily connected based on shared classes and exam scores. This can be useful in creating study groups, finding group assignment partners or even complaining about tests.
 
 ## 📱 What it does
 
-Users create an account using their emails. They can then flesh out a small profile by filling out a bio, adding a profile picture, link social media handles (instagram,messenger, GitHub, Slack, LinkedIn, etc.), and selecting what classes they are currently taking or have already taken. Once they have set up their accounts, they can scroll through people who are in similar classes or have similar interests. If they both agree to match, their social media handles are revealed to eachother. From there, they can create plans on their desired social media platform.
+Users create an account using their emails. They can then flesh out a small profile by filling out a bio, adding a profile picture, linking social media handles (Instagram, Messenger, GitHub, Slack, LinkedIn, etc.), and selecting what classes they are currently taking or have already taken. Once they have set up their accounts, they can scroll through people who are in similar classes or have similar interests. If they both agree to match, their social media handles are revealed to each other. From there, they can create plans on their desired social media platform.
 
 ### 📃 Full Feature List
 
-- Firebase for storing userdata
+- Firebase for storing user data
 - Selection of classes
 - Linking social media handles
 - Swipe through people who have similar classes and/or interests
@@ -26,17 +26,17 @@ Users create an account using their emails. They can then flesh out a small prof
   - `SwiftUI`: Was used to create the frontend using various components
 - **Firebase**: 
   -  `FirebaseAuth`: FirebaseAuth handles logging in and authorizations
-  -  `FireStore`: Firestore acted as our database to store userdata (email, name, classes, connections, etc.)
+  -  `FireStore`: Firestore acted as our database to store user data (email, name, classes, connections, etc.)
 
 ## 🛑 Challenges we ran into
 
 - We didn't know Swift before this so learning an entire language was quite difficult
 - Figuring out a simple yet effective solution for fostering communication between students after they have matched
-- Making sure that sign-in was persistant
+- Making sure that sign-in was persistent
 
 ## ✅ Accomplishments that we're proud of
 
-- Making an entire "usable" swift app in 48 caffiene frenzy induced hours
+- Making an entire "usable" swift app in 48 caffeine frenzy induced hours
 - The UI slaps sometimes
   
 ## 📖 What we learned
@@ -48,9 +48,8 @@ Users create an account using their emails. They can then flesh out a small prof
 
 - Refine the user authentication process
 - Incorporate ML into the bio to match users off similar bios as well
-- Add self reporting scores so we can also match users off exam scores
+- Add self-reporting scores so we can also match users off exam scores
 - Create time-limited events for assignment group creation
-
 
 ![tech_stack](https://user-images.githubusercontent.com/47152801/150666056-da50b7af-9657-4dee-8637-f741f375fa0a.png)
 
