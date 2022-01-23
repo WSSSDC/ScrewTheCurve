@@ -24,9 +24,9 @@ Users create an account using their emails. They can then flesh out a small prof
 - **Adobe XD**: We designed the mockups in Adobe XD to figure out the UI/UX and the general flow of the app
 - **Swift**: We wrote the entire app in Swift.
   - `SwiftUI`: Was used to create the frontend using various components
-- **Firebase**: We used Firebase to store the user information
-  -  `FirebaseAuth`:
-  -  `FireStore`:
+- **Firebase**: 
+  -  `FirebaseAuth`: FirebaseAuth handles logging in and authorizations
+  -  `FireStore`: Firestore acted as our database to store userdata (email, name, classes, connections, etc.)
 
 ## 🛑 Challenges we ran into
 
@@ -52,7 +52,7 @@ Users create an account using their emails. They can then flesh out a small prof
 - Create time-limited events for assignment group creation
 
 
-![techstack]()
+![tech_stack](https://user-images.githubusercontent.com/47152801/150666056-da50b7af-9657-4dee-8637-f741f375fa0a.png)
 
 ## 🖼 Gallery
 
